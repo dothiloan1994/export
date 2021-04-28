@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Export</title>
+    <link rel="stylesheet" href="libs/bootstrap3.4.1/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto%20Sans" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" href="libs/fontaw5.15.1/css/all.css">
+</head>
+<body>
+<section class="col-md-12 cartpgtitle section">
+    <div class="container">
+        <div class="row">
+            <div class="center">
+                <h1>Export XLSX File</h1>
+                <form action="/upload-done" method="post" enctype="multipart/form-data">
+                    <label class="sllabel"><h5>Select File CSV</h5></label>
+                    <input type="file" id="myFile" name="uploadfile" />
+                    <label class="sllabel"><h5>Select Export Pattern</h5></label><br>
+                    <select class="form-select" aria-label="Default select example" name="pattern">
+                        <option value="1" selected>Common without Image</option>
+                        <option value="2" selected>Common with Image</option>
+                        <option value="3">Phòng khám U Biếu Hà Nội</option>
+                        <option value="4">Phòng khám Đại Nghĩa</option>
+                        <option value="5">Phòng khám Đức Tín</option>
+                        <option value="6">Phòng khám Vincare</option>
+                    </select><br>
+                    <label class="sllabel"><h5>Signature</h5></label><br>
+                    <input type="radio" id="sign1" name="signature" value="1">
+                    <label for="sign1">Sử dụng chữ ký</label><br>
+                    <input type="radio" id="sign2" name="signature" value="0">
+                    <label for="sign2">Không sử dụng chữ ký</label><br>
+                    <button type="submit" class="btn">Export <i class="fas fa-cloud-download-alt fasbtt"></i></button>
+                </form>
+                <a class="dltxt" href="/csv/template.csv" download>Download CSV Template</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
